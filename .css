@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    height: 100vh;
+    background: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        color-stop(50%, #2B8CED),
+        color-stop(50%, #171B1F)
+    );
+    background: -o-linear-gradient(
+        #2B8CED 50%,
+        #171B1F 50%
+    );
+    background: linear-gradient(
+        #2B8CED 50%,
+        #171B1F 50%
+    )
+}
+.wrapper{
+    height: 450px;
+    width: 320px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.container{
+    height: 320px;
+    width: 320px;
+    background-color: #252B33;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    -webkit-box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+}
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    height: 120px;
+    border-right: 40px solid #454B51;
+    border-bottom: 40px solid transparent;
+    position: relative;
+    left: 20px;
+    outline: none;
+    cursor: pointer;
+}
+input:before{
+    content: "";
+    position: absolute;
+    left: -39.5px;
+    height: 120px;
+    border-left: 40px solid #454B51;
+    border-bottom: 40px solid transparent;
+}
+input:checked{
+    -webkit-animation: scale 0.4s;
+            animation: scale 0.4s;
+    border-right-color: #2B8CED;
+    -webkit-transition: 0.1s 0.3s border;
+    -o-transition: 0.1s 0.3s border;
+    transition: 0.1s 0.3s border;
+}
+@-webkit-keyframes scale{
+    80%{
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+    }
+}
+@keyframes scale{
+    80%{
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+    }
+}
+input:checked:before{
+    border-left-color: #2B8CED;
+    -webkit-transition: 0.1s 0.3s border;
+    -o-transition: 0.1s 0.3s border;
+    transition: 0.1s 0.3s border;
+}
